@@ -1,0 +1,15 @@
+public static ArrayList<Integer> Factors(int n){
+	    ArrayList<Integer> list=new ArrayList<>();
+	    
+	    for(int i=1;i<(Math.sqrt(n));i++){    // check upto square root to reduce complexity
+	        if(n%i==0){
+	            list.add(i);
+	            if((n/i)!=i){         // check for already added factor
+	                list.add(n/i);
+	            }
+	        }
+	    }
+	    Collections.sort(list);
+	    return list;
+	    
+	}
