@@ -1,4 +1,4 @@
-public static ArrayList<Integer> Factors(int n){
+public static ArrayList<Integer> Factors(int n){                                                        TimeComplexity = O(sqrt(n))
 	    ArrayList<Integer> list=new ArrayList<>();
 	    
 	    for(int i=1;i<(Math.sqrt(n));i++){    // check upto square root (i*i<=n) to reduce complexity 
