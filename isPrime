@@ -1,4 +1,4 @@
-public static boolean isPrime(int n){
+public static boolean isPrime(int n){                                                                  TimeComplexity = O(Sqrt(n)
 	    int count=0;
 	    
 	    for(int i=1;i*i<=n;i++){    // check upto square root to reduce complexity
