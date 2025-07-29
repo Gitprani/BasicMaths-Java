@@ -1,0 +1,19 @@
+public static boolean isAms(int n){
+	    int org=n;
+	    int count=0;
+	    int ans=0;
+	    int temp=n;
+	    
+	    while(temp!=0){
+	        count++;
+	        temp/=10;
+	    }
+	    temp=n;
+	    
+	    while(temp!=0){
+	        int rem=temp%10;
+	        ans+=Math.pow(rem,count);
+	        temp/=10;
+	    }
+	    return org==ans;
+	}
