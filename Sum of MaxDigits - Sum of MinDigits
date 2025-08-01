@@ -1,0 +1,47 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    int input1=5432;
+	    int input2=4572;
+	    int input3=3789;
+	    
+	    int sum1=MaxDigit(input1) + MaxDigit(input2) + MaxDigit(input3);
+	    int sum2=MinDigit(input1) + MinDigit(input2) + MinDigit(input3);
+	    
+	    System.out.print(sum1-sum2);
+	    
+		
+	}
+	public static int MaxDigit(int n){
+	    int max=0;
+	    ArrayList<Integer> list=new ArrayList<>();
+	    
+	    while(n!=0){
+	        int rem=n%10;
+	        list.add(rem);
+	        n/=10;
+	    }
+	    for(int i=0;i<list.size();i++){
+	        if(list.get(i)>max){
+	            max=list.get(i);
+	        }
+	    }
+	    return max;
+	}
+	public static int MinDigit(int n){
+	    int min=999999;
+	    ArrayList<Integer> list=new ArrayList<>();
+	    
+	    while(n!=0){
+	        int rem=n%10;
+	        list.add(rem);
+	        n/=10;
+	    }
+	    for(int i=0;i<list.size();i++){
+	        if(list.get(i)<min){
+	            min=list.get(i);
+	        }
+	    }
+	    return min;
+	}
+}
