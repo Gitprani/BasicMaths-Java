@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long N = 100;                           specialized for long integers
+        long K = 1000;
+        System.out.println(lastDigit(N, K));                                                                 Complexity=O(1),O(1)
+    }
+
+    public static int lastDigit(long N, long K) {
+        if (K == 0) return 1; // any number ^ 0 = 1
+
+        long newN=N%10;                                    // as last digit of number determines the last digit of powered
+        
+        long newK=K%4;                                    // every last digit repeats in <=4 cycles
+        if(newK==0){
+            newK=4;                     // it should be in range{1,2,3,4}
+        }
+        return (int)(Math.pow(newN,newK)%10);         // last digit of power
+    }
+}
