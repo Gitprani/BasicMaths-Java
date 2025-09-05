@@ -1,0 +1,23 @@
+import java.util.*;                                                                                              Complexity=O(1),O(1)
+
+public class Main {
+    public static void main(String[] args) {
+        for(int i=(int)Math.sqrt(1000);i<=(int)Math.sqrt(9999);i++){          //in the range[1000,9999]
+            int PS=i*i;
+            if(isEven(PS)){
+                System.out.println(PS);             // print all even digited perfect squares
+            }
+        }
+        
+    }
+    public static boolean isEven(int num){           // will ensure even digits(0,2,4,6,8)
+        while(num!=0){
+            int digit=num%10;
+            if(digit%2!=0){
+                return false;
+            }
+            num/=10;
+        }
+        return true;
+    }
+}
